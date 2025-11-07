@@ -12,8 +12,7 @@
     <meta name="author" content="Tu Nombre">
     <title>Poliglobulia: Causas, Síntomas y Tratamientos</title>
     
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="styles.css"> <!-- Enlace a un archivo CSS externo -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -86,25 +85,31 @@
     </header>
 
     <!-- Sección para el modelo 3D en AR -->
-    <section>
-        <h2>Explora el Modelo 3D en AR</h2>
-        <model-viewer src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/circulatorio.glb"
-            ar 
-            ar-modes="scene-viewer webxr quick-look" 
-            camera-controls 
-            tone-mapping="neutral" 
-            poster="poster.webp" 
-            shadow-intensity="1" 
+    <section>        
+        <model-viewer src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/circulatorio.glb" 
+            ar ar-modes="scene-viewer webxr quick-look"
+            camera-controls tone-mapping="neutral"             
+            shadow-intensity="1"
             environment-image="music_hall_01_1k.hdr" 
             skybox-image="music_hall_01_1k.hdr">
-            <!-- Aquí puedes agregar los Hotspots si es necesario -->
-        </model-viewer>
-        <p>Usa la función de realidad aumentada para ver el modelo 3D en tu entorno a través de tu dispositivo móvil.</p>
-    </section>
-
+    <button class="Hotspot" slot="hotspot-1" data-position="0.046311614872285606m 0.963045670113595m 0.08569933517929684m" data-normal="0.2373747293889231m -0.2941089894246505m 0.9258256532345311m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Arteria
+        </div>
+    </button><button class="Hotspot" slot="hotspot-2" data-position="-0.005006162993667598m 1.364070365499539m 0.08842380354286307m" data-normal="-0.1755571887512732m 0.5437674329139217m 0.8206684180471145m" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation">Corazon</div>
+    </button>
+    <div class="progress-bar hide" slot="progress-bar">
+        <div class="update-bar"></div>
+    </div>
+    <button slot="ar-button" id="ar-button">
+        View in your space
+    </button>
+    
+</model-viewer>
+        
     <!-- Botón de AR flotante en la parte inferior central -->
     <button id="ar-button">Ver en mi espacio</button>
-
+    </section>
     <section>
         <h2>¿Qué es la Poliglobulia?</h2>
         <p>La poliglobulia es una condición médica caracterizada por un aumento anormal en el número de glóbulos rojos en la sangre. Esto puede llevar a un mayor grosor de la sangre, lo que dificulta su circulación y puede resultar en complicaciones como trombosis.</p>
