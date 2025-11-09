@@ -50,31 +50,39 @@ nav a:hover {
 
 /* === HERO === */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('http://imagenes.20minutos.es/files/image_1280_720/uploads/imagenes/2020/06/25/globulos-rojos-sangre.jpeg') center/cover;
-    color: #fff;
+    background: url('http://imagenes.20minutos.es/files/image_1280_720/uploads/imagenes/2020/06/25/globulos-rojos-sangre.jpeg') no-repeat center center/cover;
+    color: white;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 100px 0;
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    background-size: cover; /* La imagen cubrirá todo el ancho y alto */
+    background-position: center center; /* Centra la imagen en el área disponible */
 }
 
-.hero h1 {  
+.hero h1 {
     font-size: 2.5rem;
+    font-weight: bold;
     margin-bottom: 1rem;
 }
 
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
 .hero .btn {
-    background: #c0392b;
+    background-color: #f1c40f;
     color: #fff;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 4px;
+    padding: 0.7rem 1.5rem;
     text-decoration: none;
-    transition: background 0.3s ease;
-    margin-top: 10rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
 }
 
 .hero .btn:hover {
-    background: #e74c3c;
+    background-color: #d4a70d;
 }
 
 /* === SECCIONES === */
@@ -93,6 +101,59 @@ h2 {
     margin-bottom: 1rem;
 }
 
+/* === SECCIÓN CAUSAS COMUNES === */
+#causas {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.texto-imagen {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.texto {
+    flex: 2;
+}
+
+.imagen {
+    flex: 1;
+    text-align: center;    
+}
+
+.imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === SECCIÓN SÍNTOMAS === */
+.symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* === SECCIÓN COMPLICACIONES === */
 .symptoms-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -148,6 +209,8 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+/* === TEXTO E IMAGEN === */
 .texto-imagen {
     display: flex;
     align-items: flex-start;
@@ -170,4 +233,114 @@ footer {
     max-width: 350px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    background-color: #f1c40f;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #d4a70d;
+}
+
+/* === SECCIÓN DE CONTENIDO === */
+.content-section {
+    padding: 50px 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.content-section.bg-light {
+    background-color: #fafafa;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* === TEXTO E IMAGEN === */
+.texto-imagen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.texto-imagen .texto {
+    flex: 2;
+}
+
+.texto-imagen .imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.texto-imagen img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === CARD GRID (Síntomas/Complicaciones) === */
+.symptoms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.card {
+    background-color: #f1c40f;
+    color: #333;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+}
+
+.card:hover {
+    background-color: #e67e22;
+    cursor: pointer;
+}
+
+/* === ESTILOS DE IMAGEN FINAL === */
+.imagen img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #7e0000;
+    color: #fff;
+    font-size: 1rem;
 }
