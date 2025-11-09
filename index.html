@@ -1,273 +1,148 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poliglobulia - Información Médica</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-</head>
-<body>
-    <header>
-        <div class="logo">POLIGLOBULIA</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#definicion">Definición</a></li>
-                <li><a href="#causas">Causas</a></li>
-                <li><a href="#sintomas">Síntomas</a></li>
-                <li><a href="#complicaciones">Complicaciones</a></li>
-                <li><a href="#tratamiento">Tratamiento</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="inicio" class="hero">
-        <br><br><br> 
-        <h1>Poliglobulia: Mas alla del exceso de globulos rojos</h1>
-        <p>El lado espeso de la sangre,causas,consecuencias,tratamiento.</p>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Poliglobulia - Información Médica</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="logo">POLIGLOBULIA</div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#definicion">Definición</a></li>
+                    <li><a href="#causas">Causas</a></li>
+                    <li><a href="#sintomas">Síntomas</a></li>
+                    <li><a href="#complicaciones">Complicaciones</a></li>
+                    <li><a href="#tratamiento">Tratamiento</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <section id="inicio" class="hero">
+            <br><br><br> 
+            <h1>Poliglobulia: Mas alla del exceso de globulos rojos</h1>
+            <p>El lado espeso de la sangre,causas,consecuencias,tratamiento.</p>
 
-        <br><br><br> 
+            <br><br><br> 
 
-        <a href="#definicion" class="btn">Saber más</a>
+            <a href="#definicion" class="btn">Saber más</a>
+        </section>
+
+        <main>
+            <section id="definicion" class="content-section">
+                <h2>¿Qué es la Poliglobulia?</h2>
+                <p>
+                    La Poliglobulia es un síndrome caracterizado por un incremento anormal de la masa eritrocitaria, la hemoglobina (proteína dentro de los glóbulos rojos que transporta el oxígeno de los pulmones al resto del cuerpo y el dióxido de carbono de regreso a los pulmones) y el hematocrito (volumen total de sangre que está ocupado por los glóbulos rojos); es de etiología 
+                    multifactorial y desencadena el deterioro de la salud, vida social, familiar y laboral del paciente 
+                    <br>
+                    Las principales patógicas de importancia clínica son la: Eritrocitosis Patológica de altura 7%, Eritrocitosis Secundaria 90% y Policitemia Vera 1%, estas 3 patologías engloban más del 98% de todas las eritrocitosis patológicas
+                    .En Bolivia, alrededor de 2.000.000 habitantes residen en las ciudades de La Paz y El alto; y se considera que existen más de 150.000 pacientes con eritrocitosis patológica
+                    La incidencia de las eritrocitosis patológicas en la región andina varía de acuerdo a la población, ocupación y lugar de residencia. Por ejemplo en las ciudades de La Paz y El Alto (3.600 y 4.000 msnm) se considera una incidencia del 10% de la población. 
+                    ,los datos históricos de la incidencia de la Policitemia Vera se encuentran alrededor de 1 por cada 100.000 habitantes por año.
+                    <br>
+                    Otras Patologias son la eritrocitosis mixta adquirida está representada por la Eritrocitosis Patológica de Altura, caracterizada por niveles normales de eritropoyetina sérica. Este tipo de eritrocitosis es propia de los habitantes andinos. 
+                    La eritrocitosis mixta congénita se debe a cambios en la línea germinal del DNA como las mutaciones hereditarias recesivas del gen Von Hippel Lindau (VHL) en la policitemia de Chuvash, se caracteriza por niveles elevados de eritropoyetina sérica.Otra Palogia es Eritrocitosis Primaria caracterizada por presentar una eritropoyetina sérica disminuida o normal.
+                    
+                    
+                    
+                </p>
+            </section>
+            <!-- ===== SECCIÓN DEL MODELO 3D ===== -->
+    <section id="modelo3d" class="content-section bg-light">
+        <h2>Modelo 3D Interactivo</h2>
+        <p>Explora en 3D y entra al modo de Realidad Virtual para observar el modelo de forma inmersiva.</p>
+
+        <div class="modelo-container">
+            <model-viewer
+                id="viewer3d"
+                src="models/M1.glb"
+                alt="Modelo 3D de glóbulos rojos"
+                auto-rotate
+                camera-controls
+                shadow-intensity="1"
+                ar
+                ar-modes="webxr scene-viewer quick-look"
+                style="width: 100%; height: 500px; background-color: #f5f5f5; border-radius: 10px;">
+            </model-viewer>
+        </div>
+
+        <!-- Botón para VR -->
+        <div class="vr-button-container">
+            <button id="btnVR" class="vr-btn">🕶️ Entrar en Realidad Virtual</button>
+            <p id="noVRmsg" style="display:none; color: gray; margin-top: 10px;">
+                Tu navegador o dispositivo no soporta WebXR (VR).
+            </p>
+        </div>
     </section>
 
-    <main>
-        <section id="definicion" class="content-section">
-            <h2>¿Qué es la Poliglobulia?</h2>
-            <p>
-                La Poliglobulia es un síndrome caracterizado por un incremento anormal de la masa eritrocitaria, la hemoglobina (proteína dentro de los glóbulos rojos que transporta el oxígeno de los pulmones al resto del cuerpo y el dióxido de carbono de regreso a los pulmones) y el hematocrito (volumen total de sangre que está ocupado por los glóbulos rojos); es de etiología 
-                multifactorial y desencadena el deterioro de la salud, vida social, familiar y laboral del paciente 
-                <br>
-                Las principales patógicas de importancia clínica son la: Eritrocitosis Patológica de altura 7%, Eritrocitosis Secundaria 90% y Policitemia Vera 1%, estas 3 patologías engloban más del 98% de todas las eritrocitosis patológicas
-                .En Bolivia, alrededor de 2.000.000 habitantes residen en las ciudades de La Paz y El alto; y se considera que existen más de 150.000 pacientes con eritrocitosis patológica
-                La incidencia de las eritrocitosis patológicas en la región andina varía de acuerdo a la población, ocupación y lugar de residencia. Por ejemplo en las ciudades de La Paz y El Alto (3.600 y 4.000 msnm) se considera una incidencia del 10% de la población. 
-                ,los datos históricos de la incidencia de la Policitemia Vera se encuentran alrededor de 1 por cada 100.000 habitantes por año.
-                <br>
-                Otras Patologias son la eritrocitosis mixta adquirida está representada por la Eritrocitosis Patológica de Altura, caracterizada por niveles normales de eritropoyetina sérica. Este tipo de eritrocitosis es propia de los habitantes andinos. 
-                La eritrocitosis mixta congénita se debe a cambios en la línea germinal del DNA como las mutaciones hereditarias recesivas del gen Von Hippel Lindau (VHL) en la policitemia de Chuvash, se caracteriza por niveles elevados de eritropoyetina sérica.Otra Palogia es Eritrocitosis Primaria caracterizada por presentar una eritropoyetina sérica disminuida o normal.
-                
-                
-                
-            </p>
-        </section>
- <!-- Modelo 3D -->
-  <section>
-    <h2>Modelo Interactivo del Sistema Circulatorio</h2>
-    <model-viewer src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/models/M1.glb"
-  ar ar-modes="scene-viewer webxr quick-look"
-  camera-controls tone-mapping="neutral"
-  poster="poster.webp" shadow-intensity="1"
-  environment-image="music_hall_01_1k.hdr" skybox-image="music_hall_01_1k.hdr"
-  camera-position="0m 0.5m 10m"  
-  style="width: 100%; height: 100vh;">
-  
-  <!-- Hotspot 1: Arteria -->
-  <button class="Hotspot" slot="hotspot-1" 
-          data-position="0.046311614872285606m 0.963045670113595m 0.08569933517929684m"
-          data-normal="0.2373747293889231m -0.2941089894246505m 0.9258256532345311m"
-          data-visibility-attribute="visible"
-          onclick="focusOnHotspot(0.046, 0.963, 0.086);">
-    <div class="HotspotAnnotation">Arteria</div>
-  </button>
+    <!-- Script para detección de WebXR y activación de VR -->
+    <script>
+        const modelViewer = document.querySelector('#viewer3d');
+        const btnVR = document.querySelector('#btnVR');
+        const noVRmsg = document.querySelector('#noVRmsg');
 
-  <!-- Hotspot 2: Corazón -->
-  <button class="Hotspot" slot="hotspot-2" 
-          data-position="-0.005006162993667598m 1.364070365499539m 0.08842380354286307m"
-          data-normal="-0.1755571887512732m 0.5437674329139217m 0.8206684180471145m"
-          data-visibility-attribute="visible"
-          onclick="focusOnHotspot(-0.005, 1.364, 0.088);">
-    <div class="HotspotAnnotation">Corazón</div>
-  </button>
+        // Detectar si el navegador soporta VR (WebXR)
+        if (navigator.xr) {
+            navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+                if (supported) {
+                    btnVR.style.display = 'inline-block';
+                    noVRmsg.style.display = 'none';
+                } else {
+                    btnVR.style.display = 'none';
+                    noVRmsg.style.display = 'block';
+                }
+            });
+        } else {
+            btnVR.style.display = 'none';
+            noVRmsg.style.display = 'block';
+        }
 
-  <!-- Barra de progreso -->
-  <div class="progress-bar hide" slot="progress-bar">
-    <div class="update-bar"></div>
-  </div>
-
-  <!-- Botón AR -->
-  <button slot="ar-button" id="ar-button">View in your space</button>
-  
-  <div id="ar-prompt">
-    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-  </div>
-
-</model-viewer>
-
-<script>
-  function focusOnHotspot(x, y, z) {
-    // Modifica la posición de la cámara para centrarla en el hotspot
-    const modelViewer = document.querySelector('model-viewer');
-    modelViewer.cameraOrbit = `${x}rad ${y}rad ${z}m`; // Ajusta la cámara al hotspot
-    modelViewer.cameraTarget = `${x}m ${y}m ${z}m`;  // Apunta la cámara al hotspot
-  }
-</script>
-
-<script>
-    // Verificar si el navegador soporta AR y mostrar el botón AR
-    const modelViewer = document.querySelector('model-viewer');
-    const arButton = document.getElementById('ar-button');
-    const noARMsg = document.getElementById('noARmsg');
-
-    if (modelViewer && modelViewer.hasAttribute('ar')) {
-        // Mostrar el botón AR solo si es compatible
-        arButton.style.display = 'block';
-        arButton.addEventListener('click', () => {
-            modelViewer.enterAR();
+        // Entrar en modo VR al hacer clic
+        btnVR.addEventListener('click', () => {
+            modelViewer.enterAR(); // usa AR/VR interno del model-viewer (WebXR)
         });
-    } else {
-        arButton.style.display = 'none';
-        noARMsg.style.display = 'block';
-    }
-</script>
+    </script>
+    </section>
 
-    </div>
-    
-</section>
-
-        <section id="causas" class="content-section bg-light">
-            <h2>Causas Comunes</h2>
-            <ul>
-                Las Poliglobulias patológicas presentan diferentes factores predisponentes para su desarrollo.
-                <br><br>
-                Eritrocitosis Patológica de Altura: 
-                <br>
-                ▪ Radicatoria en alturas mayores a 2.500 msnm 
-                <br>
-                ▪ Ausencia de adaptación genética 
-                <br>
-                ▪ Sujetos nacidos a nivel del mar 
-                <br>
-                ▪ Historia familiar de residencia a nivel del mar 
-                <br><br>
-                Eritrocitosis Secundaria:
-                <br>
-                ▪ Secuelas de patologías pulmonares 
-                <br>
-                ▪ Patologías pulmonares crónicas 
-                <br>
-                ▪ Obesidad / Síndrome metabólico 
-                <br>
-                ▪ Síndrome de Apnea Obstructiva del Sueño (SAOS). 
-                <br>
-                ▪ Cardiopatía 
-                <br>
-                ▪ Tabaquismo 
-                <br><br>
-                Policitemia Vera: 
-                <br>
-                ▪ Edad, adulto mayor
-            </ul>
-            <div>
-                <div class="imagen">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
-                </div>
-            </div>
-        </section>
-
-        <section id="sintomas" class="content-section">
-            <h2>Síntomas</h2>
-            <p>Los síntomas pueden variar, pero los más comunes son:</p>
-            <div class="symptoms-grid">
-                <a href="https://medlineplus.gov/spanish/ency/article/003024.htm" target="_blank">
-                    <div class="card">Dolor de cabeza</div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/dizziness/symptoms-causes/syc-20371787" target="_blank">
-                    <div class="card">Mareos</div>
-                </a>
-                <a href="https://my.clevelandclinic.org/health/symptoms/skin-flushing" target="_blank">
-                    <div class="card">Enrojecimiento de la piel</div>    
-                </a>
-                <a href="https://www.msdmanuals.com/es/hogar/temas-especiales/s%C3%ADntomas-inespec%C3%ADficos/fatiga" target="_blank">
-                    <div class="card">Fatiga</div>
-                </a>
-                <a href="https://medlineplus.gov/spanish/ency/article/003029.htm" target="_blank">
-                    <div class="card">Problemas visuales</div>
-                </a>
-                <a href="hhttps://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/dificultad-respiratoria" target="_blank">
-                    <div class="card">Dificultad para respirar</div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/tinnitus/symptoms-causes/syc-20350156" target="_blank">
-                    <div class="card">Tinnitus</div>
-                </a>
-                <a href="hhttps://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/dificultad-respiratoria" target="_blank">
-                    <div class="card">Falta de aire</div>
-                </a>
-                <a href="https://medlineplus.gov/spanish/ency/article/003029.htm" target="_blank">
-                    <div class="card">Visión borrosa </div>
-                </a>
-                <a href="https://www.aktifinternational.com/es/que-es-la-mialgia-cuales-son-los-sintomas/" target="_blank">
-                    <div class="card">Mialgias </div>
-                </a>
-                <a href="https://empendium.com/manualmibe/para-pacientes/303115,alteraciones-de-la-conciencia" target="_blank">
-                    <div class="card">Alteraciones del estado de conciencia </div>
-                </a>
-                <a href="https://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/cianosis" target="_blank">
-                    <div class="card">Cianosis periférica </div>
-                </a>
-                <a href="https://empendium.com/manualmibe/compendio/chapter/B34.I.1.42." target="_blank">
-                    <div class="card">Ingurgitación venosa </div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/edema/symptoms-causes/syc-20366493" target="_blank">
-                    <div class="card"> Edema </div>
-                </a>
-                <div>
-                    
-                </div>
-                
-             </div>
-            </section>
-                <section id=" " class="content-section bg-light">
-                <ul>  
-                <p>
-                    Sin embargo, cada una de las eritrocitosis patológicas presentan sintomatología adicional propia que las distingue unas de otras. Así por ejemplo, la eritrocitosis secundaria generalmente presenta una patología cardiopulmonar; mientras que, la policitemia vera presenta sintomatología propia de enfermedades neoplásicas, como evento trombótico frecuente, esplenomegalia y pérdida de peso. 
-                </p>
-                </ul>
-            </section>  
-            <div class="imagen">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
-            </div>     
-        <section id="complicaciones" class="content-section">
-            <h2>Complicaciones</h2>
-            <p>Los síntomas pueden variar, pero los más comunes son:</p>
-            <div class="symptoms-grid">
-                <a href="https://trombo.info/enfermedad-tromboembolica/trombosis-venosa-profunda/" target="_blank">
-                    <div class="card">Evento trombótico</div>
-                </a>
-                <a href="https://www.who.int/es/news-room/fact-sheets/detail/hypertension" target="_blank">
-                    <div class="card">Hipertensión Arterial Sistémica</div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/pulmonary-hypertension/symptoms-causes/syc-20350697" target="_blank">
-                    <div class="card">Hipertensión Arterial Pulmonar</div>
-                </a>
-                <a href="https://www.msdmanuals.com/es/professional/trastornos-otorrinolaringol%C3%B3gicos/abordaje-del-paciente-con-s%C3%ADntomas-nasales-y-far%C3%ADngeos/epistaxis" target="_blank">
-                    <div class="card">Epistaxis</div>
-                </a>
-                <a href="https://medlineplus.gov/spanish/ency/article/003200.htm" target="_blank">
-                    <div class="card"> Convulsiones </div>
-                </a>
-                <a href="https://icrcat.com/enfermedades-oculares/desprendimiento-de-retina/" target="_blank">
-                    <div class="card">Desprendimiento de retina </div>
-                </a>
-                <a href="https://www.msdmanuals.com/es/professional/trastornos-endocrinol%C3%B3gicos-y-metab%C3%B3licos/diabetes-mellitus-y-trastornos-del-metabolismo-de-los-hidratos-de-carbono/diabetes-mellitus-dm" target="_blank">
-                    <div class="card">diabetes mellitus y policitemia</div>
-                </a>
-            </div>
-                <div class="imagen">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
-                </div>
-            </div>
-            </section>
-            <section id="tratamiento" class="content-section bg-light">
-                <h2>Tratamiento</h2>
-                <p>
-                    El tratamiento depende de la causa subyacente. En casos leves puede bastar con eliminar la causa (por ejemplo, dejar de fumar o tratar una enfermedad pulmonar),
-                    sin embargo de las eritrocitosis patológicas en la altura (Eritrocitosis Patologica de Altura, Eritrocitosis Secundaria y Policitemia Vera) se considera dos fases; la primera, el procedimiento de flebotomías que tiene el objetivo de disminuir la sintomatología del paciente; y la segunda, el tratamiento farmacológico que tiene la finalidad de establecer y mantener un cuadro clínico estable, evitando recaídas y complicaciones. 
+            <section id="causas" class="content-section bg-light">
+                <h2>Causas Comunes</h2>
+                <ul>
+                    Las Poliglobulias patológicas presentan diferentes factores predisponentes para su desarrollo.
+                    <br><br>
+                    Eritrocitosis Patológica de Altura: 
                     <br>
-                    Sin embargo si tiene sintomas similares acuda al centro de salud mas cercano.
-                </p>
+                    ▪ Radicatoria en alturas mayores a 2.500 msnm 
+                    <br>
+                    ▪ Ausencia de adaptación genética 
+                    <br>
+                    ▪ Sujetos nacidos a nivel del mar 
+                    <br>
+                    ▪ Historia familiar de residencia a nivel del mar 
+                    <br><br>
+                    Eritrocitosis Secundaria:
+                    <br>
+                    ▪ Secuelas de patologías pulmonares 
+                    <br>
+                    ▪ Patologías pulmonares crónicas 
+                    <br>
+                    ▪ Obesidad / Síndrome metabólico 
+                    <br>
+                    ▪ Síndrome de Apnea Obstructiva del Sueño (SAOS). 
+                    <br>
+                    ▪ Cardiopatía 
+                    <br>
+                    ▪ Tabaquismo 
+                    <br><br>
+                    Policitemia Vera: 
+                    <br>
+                    ▪ Edad, adulto mayor
+                </ul>
                 <div>
                     <div class="imagen">
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
@@ -275,17 +150,120 @@
                 </div>
             </section>
 
-        <section id="contacto" class="content-section">
-            <h2>Contacto</h2>
-            <p>Para más información o consulta médica, comunícate con tu centro de salud o con un hematólogo especializado.</p>
-            <br><br>
-    <footer>
-        <p>© 2025 Información sobre Poliglobulia | Desarrollado por JPL</p>
-    </footer>
-</body>
-</html>
+            <section id="sintomas" class="content-section">
+                <h2>Síntomas</h2>
+                <p>Los síntomas pueden variar, pero los más comunes son:</p>
+                <div class="symptoms-grid">
+                    <a href="https://medlineplus.gov/spanish/ency/article/003024.htm" target="_blank">
+                        <div class="card">Dolor de cabeza</div>
+                    </a>
+                    <a href="https://www.mayoclinic.org/es/diseases-conditions/dizziness/symptoms-causes/syc-20371787" target="_blank">
+                        <div class="card">Mareos</div>
+                    </a>
+                    <a href="https://my.clevelandclinic.org/health/symptoms/skin-flushing" target="_blank">
+                        <div class="card">Enrojecimiento de la piel</div>    
+                    </a>
+                    <a href="https://www.msdmanuals.com/es/hogar/temas-especiales/s%C3%ADntomas-inespec%C3%ADficos/fatiga" target="_blank">
+                        <div class="card">Fatiga</div>
+                    </a>
+                    <a href="https://medlineplus.gov/spanish/ency/article/003029.htm" target="_blank">
+                        <div class="card">Problemas visuales</div>
+                    </a>
+                    <a href="hhttps://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/dificultad-respiratoria" target="_blank">
+                        <div class="card">Dificultad para respirar</div>
+                    </a>
+                    <a href="https://www.mayoclinic.org/es/diseases-conditions/tinnitus/symptoms-causes/syc-20350156" target="_blank">
+                        <div class="card">Tinnitus</div>
+                    </a>
+                    <a href="hhttps://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/dificultad-respiratoria" target="_blank">
+                        <div class="card">Falta de aire</div>
+                    </a>
+                    <a href="https://medlineplus.gov/spanish/ency/article/003029.htm" target="_blank">
+                        <div class="card">Visión borrosa </div>
+                    </a>
+                    <a href="https://www.aktifinternational.com/es/que-es-la-mialgia-cuales-son-los-sintomas/" target="_blank">
+                        <div class="card">Mialgias </div>
+                    </a>
+                    <a href="https://empendium.com/manualmibe/para-pacientes/303115,alteraciones-de-la-conciencia" target="_blank">
+                        <div class="card">Alteraciones del estado de conciencia </div>
+                    </a>
+                    <a href="https://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/cianosis" target="_blank">
+                        <div class="card">Cianosis periférica </div>
+                    </a>
+                    <a href="https://empendium.com/manualmibe/compendio/chapter/B34.I.1.42." target="_blank">
+                        <div class="card">Ingurgitación venosa </div>
+                    </a>
+                    <a href="https://www.mayoclinic.org/es/diseases-conditions/edema/symptoms-causes/syc-20366493" target="_blank">
+                        <div class="card"> Edema </div>
+                    </a>
+                    <div>
+                        
+                    </div>
+                    
+                </div>
+                </section>
+                    <section id=" " class="content-section bg-light">
+                    <ul>  
+                    <p>
+                        Sin embargo, cada una de las eritrocitosis patológicas presentan sintomatología adicional propia que las distingue unas de otras. Así por ejemplo, la eritrocitosis secundaria generalmente presenta una patología cardiopulmonar; mientras que, la policitemia vera presenta sintomatología propia de enfermedades neoplásicas, como evento trombótico frecuente, esplenomegalia y pérdida de peso. 
+                    </p>
+                    </ul>
+                </section>  
+                <div class="imagen">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
+                </div>     
+            <section id="complicaciones" class="content-section">
+                <h2>Complicaciones</h2>
+                <p>Los síntomas pueden variar, pero los más comunes son:</p>
+                <div class="symptoms-grid">
+                    <a href="https://trombo.info/enfermedad-tromboembolica/trombosis-venosa-profunda/" target="_blank">
+                        <div class="card">Evento trombótico</div>
+                    </a>
+                    <a href="https://www.who.int/es/news-room/fact-sheets/detail/hypertension" target="_blank">
+                        <div class="card">Hipertensión Arterial Sistémica</div>
+                    </a>
+                    <a href="https://www.mayoclinic.org/es/diseases-conditions/pulmonary-hypertension/symptoms-causes/syc-20350697" target="_blank">
+                        <div class="card">Hipertensión Arterial Pulmonar</div>
+                    </a>
+                    <a href="https://www.msdmanuals.com/es/professional/trastornos-otorrinolaringol%C3%B3gicos/abordaje-del-paciente-con-s%C3%ADntomas-nasales-y-far%C3%ADngeos/epistaxis" target="_blank">
+                        <div class="card">Epistaxis</div>
+                    </a>
+                    <a href="https://medlineplus.gov/spanish/ency/article/003200.htm" target="_blank">
+                        <div class="card"> Convulsiones </div>
+                    </a>
+                    <a href="https://icrcat.com/enfermedades-oculares/desprendimiento-de-retina/" target="_blank">
+                        <div class="card">Desprendimiento de retina </div>
+                    </a>
+                    <a href="https://www.msdmanuals.com/es/professional/trastornos-endocrinol%C3%B3gicos-y-metab%C3%B3licos/diabetes-mellitus-y-trastornos-del-metabolismo-de-los-hidratos-de-carbono/diabetes-mellitus-dm" target="_blank">
+                        <div class="card">diabetes mellitus y policitemia</div>
+                    </a>
+                </div>
+                    <div class="imagen">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
+                    </div>
+                </div>
+                </section>
+                <section id="tratamiento" class="content-section bg-light">
+                    <h2>Tratamiento</h2>
+                    <p>
+                        El tratamiento depende de la causa subyacente. En casos leves puede bastar con eliminar la causa (por ejemplo, dejar de fumar o tratar una enfermedad pulmonar),
+                        sin embargo de las eritrocitosis patológicas en la altura (Eritrocitosis Patologica de Altura, Eritrocitosis Secundaria y Policitemia Vera) se considera dos fases; la primera, el procedimiento de flebotomías que tiene el objetivo de disminuir la sintomatología del paciente; y la segunda, el tratamiento farmacológico que tiene la finalidad de establecer y mantener un cuadro clínico estable, evitando recaídas y complicaciones. 
+                        <br>
+                        Sin embargo si tiene sintomas similares acuda al centro de salud mas cercano.
+                    </p>
+                    <div>
+                        <div class="imagen">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
+                        </div>
+                    </div>
+                </section>
 
-
-
-
-
+            <section id="contacto" class="content-section">
+                <h2>Contacto</h2>
+                <p>Para más información o consulta médica, comunícate con tu centro de salud o con un hematólogo especializado.</p>
+                <br><br>
+        <footer>
+            <p>© 2025 Información sobre Poliglobulia | Desarrollado por JPL</p>
+        </footer>
+    </body>
+    </html>
