@@ -148,3 +148,15 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+model-viewer::part(default-ar-button) {
+    background-color: #8b0000;
+    color: white;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+}
+
+model-viewer::part(default-ar-button):hover {
+    background-color: #a93226;
+}
