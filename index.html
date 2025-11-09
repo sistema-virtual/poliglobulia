@@ -53,41 +53,57 @@
                 
             </p>
         </section>
-        <!-- ===== SECCIÓN DEL MODELO 3D ===== -->
-<section id="modelo3d" class="content-section bg-light">
-    <h2>Modelo 3D Interactivo</h2>
-    <p>Explora en 3D y entra al modo de Realidad Virtual para observar el modelo de forma inmersiva.</p>
+ <!-- Modelo 3D -->
+  <section>
+    <h2>Modelo Interactivo del Sistema Circulatorio</h2>
+    <model-viewer src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/circulatorio.glb" 
+  ar ar-modes="scene-viewer webxr quick-look"
+  camera-controls tone-mapping="neutral"
+  poster="poster.webp" shadow-intensity="1"
+  environment-image="music_hall_01_1k.hdr" skybox-image="music_hall_01_1k.hdr"
+  camera-position="0m 0.5m 10m"  
+  style="width: 100%; height: 100vh;">
+  
+  <!-- Hotspot 1: Arteria -->
+  <button class="Hotspot" slot="hotspot-1" 
+          data-position="0.046311614872285606m 0.963045670113595m 0.08569933517929684m"
+          data-normal="0.2373747293889231m -0.2941089894246505m 0.9258256532345311m"
+          data-visibility-attribute="visible"
+          onclick="focusOnHotspot(0.046, 0.963, 0.086);">
+    <div class="HotspotAnnotation">Arteria</div>
+  </button>
 
-    <div class="">
-        <model-viewer
-            id="viewer3d"
-            src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/models/M1.glb"
-            alt="Modelo 3D de glóbulos rojos"
-            auto-rotate
-            camera-controls
-            shadow-intensity="1"
-            camera-controls tone-mapping="neutral"
-            ar
-            ar-modes="webxr scene-viewer quick-look"
-            style="width: 100%; height: 500px; background-color: #f5f5f5; border-radius: 10px;">
-        
-        
-        
-        <!-- Barra de progreso -->
+  <!-- Hotspot 2: Corazón -->
+  <button class="Hotspot" slot="hotspot-2" 
+          data-position="-0.005006162993667598m 1.364070365499539m 0.08842380354286307m"
+          data-normal="-0.1755571887512732m 0.5437674329139217m 0.8206684180471145m"
+          data-visibility-attribute="visible"
+          onclick="focusOnHotspot(-0.005, 1.364, 0.088);">
+    <div class="HotspotAnnotation">Corazón</div>
+  </button>
+
+  <!-- Barra de progreso -->
   <div class="progress-bar hide" slot="progress-bar">
     <div class="update-bar"></div>
   </div>
 
+  <!-- Botón AR -->
+  <button slot="ar-button" id="ar-button">View in your space</button>
   
-        
-        </model-viewer>
+  <div id="ar-prompt">
+    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+  </div>
 
-<!-- Botón AR -->
-<button slot="ar-button" id="ar-button">View in your space</button>
-  
-<div id="ar-prompt">
-  <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-</div>
+</model-viewer>
+
+<script>
+  function focusOnHotspot(x, y, z) {
+    // Modifica la posición de la cámara para centrarla en el hotspot
+    const modelViewer = document.querySelector('model-viewer');
+    modelViewer.cameraOrbit = `${x}rad ${y}rad ${z}m`; // Ajusta la cámara al hotspot
+    modelViewer.cameraTarget = `${x}m ${y}m ${z}m`;  // Apunta la cámara al hotspot
+  }
+</script>
 
 <script>
     // Verificar si el navegador soporta AR y mostrar el botón AR
@@ -268,5 +284,6 @@
     </footer>
 </body>
 </html>
+
 
 
