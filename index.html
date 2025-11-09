@@ -58,7 +58,7 @@
     <h2>Modelo 3D Interactivo</h2>
     <p>Explora en 3D y entra al modo de Realidad Virtual para observar el modelo de forma inmersiva.</p>
 
-    <div class="modelo-container">
+    <div class="">
         <model-viewer
             id="viewer3d"
             src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/models/M1.glb"
@@ -89,6 +89,23 @@
   <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
 </div>
 
+<script>
+    // Verificar si el navegador soporta AR y mostrar el botón AR
+    const modelViewer = document.querySelector('model-viewer');
+    const arButton = document.getElementById('ar-button');
+    const noARMsg = document.getElementById('noARmsg');
+
+    if (modelViewer && modelViewer.hasAttribute('ar')) {
+        // Mostrar el botón AR solo si es compatible
+        arButton.style.display = 'block';
+        arButton.addEventListener('click', () => {
+            modelViewer.enterAR();
+        });
+    } else {
+        arButton.style.display = 'none';
+        noARMsg.style.display = 'block';
+    }
+</script>
 
     </div>
     
