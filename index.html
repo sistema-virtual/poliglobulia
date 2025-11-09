@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="es">
     <head>
         <meta charset="UTF-8">
@@ -109,6 +109,56 @@
         });
     </script>
     </section>
+    <model-viewer
+    id="viewer3d"
+    src="models/M2.glb"
+    alt="Modelo 3D de glóbulos rojos"
+    auto-rotate
+    camera-controls
+    shadow-intensity="1"
+    ar
+    ar-modes="webxr scene-viewer quick-look"
+    style="width: 100%; height: 500px; background-color: #f5f5f5; border-radius: 10px;">
+</model-viewer>
+</div>
+
+<!-- Botón para VR -->
+<div class="vr-button-container">
+<button id="btnVR" class="vr-btn">🕶️ Entrar en Realidad Virtual</button>
+<p id="noVRmsg" style="display:none; color: gray; margin-top: 10px;">
+    Tu navegador o dispositivo no soporta WebXR (VR).
+</p>
+</div>
+</section>
+
+<!-- Script para detección de WebXR y activación de VR -->
+<script>
+const modelViewer = document.querySelector('#viewer3d');
+const btnVR = document.querySelector('#btnVR');
+const noVRmsg = document.querySelector('#noVRmsg');
+
+// Detectar si el navegador soporta VR (WebXR)
+if (navigator.xr) {
+navigator.xr.isSessionSupported('immersive-vr').then((supported) => {
+    if (supported) {
+        btnVR.style.display = 'inline-block';
+        noVRmsg.style.display = 'none';
+    } else {
+        btnVR.style.display = 'none';
+        noVRmsg.style.display = 'block';
+    }
+});
+} else {
+btnVR.style.display = 'none';
+noVRmsg.style.display = 'block';
+}
+
+// Entrar en modo VR al hacer clic
+btnVR.addEventListener('click', () => {
+modelViewer.enterAR(); // usa AR/VR interno del model-viewer (WebXR)
+});
+</script>
+</section>
 
             <section id="causas" class="content-section bg-light">
                 <h2>Causas Comunes</h2>
