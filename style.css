@@ -160,3 +160,22 @@ model-viewer::part(default-ar-button) {
 model-viewer::part(default-ar-button):hover {
     background-color: #a93226;
 }
+.vr-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.vr-btn {
+    background-color: #8b0000;
+    color: white;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.vr-btn:hover {
+    background-color: #b22222;
+}
