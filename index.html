@@ -1,271 +1,244 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poliglobulia - Información Médica</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Incidencia de casos de poliglobulia en pacientes atendidos en el Banco de Sangre Departamental de Oruro en el periodo enero 2023 - junio 2025.">
+  <meta name="author" content="Tu Nombre">
+  <title>Incidencia de Poliglobulia en Oruro (2023–2025)</title>
+
+  <!-- Modelo 3D -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+  <!-- Estilos -->
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f4f7fb;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background-color: #1e88e5;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header p {
+      font-size: 1.1em;
+    }
+    section {
+      background: #fff;
+      margin: 20px auto;
+      padding: 30px;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #1565c0;
+      border-bottom: 3px solid #bbdefb;
+      padding-bottom: 5px;
+    }
+    h3 {
+      color: #1976d2;
+    }
+    model-viewer {
+      width: 100%;
+      height: 400px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+    th {
+      background-color: #e3f2fd;
+    }
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+    }
+    .keywords {
+      background-color: #e3f2fd;
+      padding: 10px;
+      border-left: 4px solid #1976d2;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">POLIGLOBULIA</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#definicion">Definición</a></li>
-                <li><a href="#causas">Causas</a></li>
-                <li><a href="#sintomas">Síntomas</a></li>
-                <li><a href="#complicaciones">Complicaciones</a></li>
-                <li><a href="#tratamiento">Tratamiento</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="inicio" class="hero">
-        <br><br><br> 
-        <h1>Poliglobulia: Mas alla del exceso de globulos rojos</h1>
-        <p>El lado espeso de la sangre,causas,consecuencias,tratamiento.</p>
+  <header>
+    <h1>Incidencia de Casos de Poliglobulia en Pacientes Atendidos en el Banco de Sangre Departamental de Oruro</h1>
+    <p><strong>Periodo de estudio:</strong> Enero 2023 – Junio 2025</p>
+  </header>
 
-        <br><br><br> 
+  <!-- Modelo 3D -->
+  <section>
+    <h2>Modelo Interactivo del Sistema Circulatorio</h2>
+    <model-viewer src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/models/M1.glb" 
+  ar ar-modes="scene-viewer webxr quick-look"
+  camera-controls tone-mapping="neutral"
+  poster="poster.webp" shadow-intensity="1"  
+  camera-position="0m 0.5m 10m"  
+  style="width: 100%; height: 100vh;">
+  
+  <!-- Hotspot 1: Arteria -->
+  <button class="Hotspot" slot="hotspot-1" 
+          data-position="0.046311614872285606m 0.963045670113595m 0.08569933517929684m"
+          data-normal="0.2373747293889231m -0.2941089894246505m 0.9258256532345311m"
+          data-visibility-attribute="visible"
+          onclick="focusOnHotspot(0.046, 0.963, 0.086);">
+    <div class="HotspotAnnotation">Arteria</div>
+  </button>
 
-        <a href="#definicion" class="btn">Saber más</a>
-    </section>
+  <!-- Hotspot 2: Corazón -->
+  <button class="Hotspot" slot="hotspot-2" 
+          data-position="-0.005006162993667598m 1.364070365499539m 0.08842380354286307m"
+          data-normal="-0.1755571887512732m 0.5437674329139217m 0.8206684180471145m"
+          data-visibility-attribute="visible"
+          onclick="focusOnHotspot(-0.005, 1.364, 0.088);">
+    <div class="HotspotAnnotation">Corazón</div>
+  </button>
 
-    <main>
-        <section id="definicion" class="content-section">
-            <h2>¿Qué es la Poliglobulia?</h2>
-            <p>
-                La Poliglobulia es un síndrome caracterizado por un incremento anormal de la masa eritrocitaria, la hemoglobina (proteína dentro de los glóbulos rojos que transporta el oxígeno de los pulmones al resto del cuerpo y el dióxido de carbono de regreso a los pulmones) y el hematocrito (volumen total de sangre que está ocupado por los glóbulos rojos); es de etiología 
-                multifactorial y desencadena el deterioro de la salud, vida social, familiar y laboral del paciente 
-                <br>
-                Las principales patógicas de importancia clínica son la: Eritrocitosis Patológica de altura 7%, Eritrocitosis Secundaria 90% y Policitemia Vera 1%, estas 3 patologías engloban más del 98% de todas las eritrocitosis patológicas
-                .En Bolivia, alrededor de 2.000.000 habitantes residen en las ciudades de La Paz y El alto; y se considera que existen más de 150.000 pacientes con eritrocitosis patológica
-                La incidencia de las eritrocitosis patológicas en la región andina varía de acuerdo a la población, ocupación y lugar de residencia. Por ejemplo en las ciudades de La Paz y El Alto (3.600 y 4.000 msnm) se considera una incidencia del 10% de la población. 
-                ,los datos históricos de la incidencia de la Policitemia Vera se encuentran alrededor de 1 por cada 100.000 habitantes por año.
-                <br>
-                Otras Patologias son la eritrocitosis mixta adquirida está representada por la Eritrocitosis Patológica de Altura, caracterizada por niveles normales de eritropoyetina sérica. Este tipo de eritrocitosis es propia de los habitantes andinos. 
-                La eritrocitosis mixta congénita se debe a cambios en la línea germinal del DNA como las mutaciones hereditarias recesivas del gen Von Hippel Lindau (VHL) en la policitemia de Chuvash, se caracteriza por niveles elevados de eritropoyetina sérica.Otra Palogia es Eritrocitosis Primaria caracterizada por presentar una eritropoyetina sérica disminuida o normal.
-                
-                
-                
-            </p>
-        </section>
-        <!-- ===== SECCIÓN DEL MODELO 3D ===== -->
-<section id="modelo3d" class="content-section bg-light">
-    <h2>Modelo 3D Interactivo</h2>
-    <p>Explora en 3D y entra al modo de Realidad Virtual para observar el modelo de forma inmersiva.</p>
-
-    <div class="">
-        <model-viewer
-            id="viewer3d"
-            src="https://raw.githubusercontent.com/sistema-virtual/poliglobulia/main/models/M1.glb"
-            alt="Modelo 3D de glóbulos rojos"
-            auto-rotate
-            camera-controls
-            shadow-intensity="1"
-            camera-controls tone-mapping="neutral"
-            ar
-            ar-modes="webxr scene-viewer quick-look"
-            style="width: 100%; height: 500px; background-color: #f5f5f5; border-radius: 10px;">
-        
-        
-        
-        <!-- Barra de progreso -->
+  <!-- Barra de progreso -->
   <div class="progress-bar hide" slot="progress-bar">
     <div class="update-bar"></div>
   </div>
 
+  <!-- Botón AR -->
+  <button slot="ar-button" id="ar-button">View in your space</button>
   
-        
-        </model-viewer>
+  <div id="ar-prompt">
+    <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+  </div>
 
-<!-- Botón AR -->
-<button slot="ar-button" id="ar-button">View in your space</button>
-  
-<div id="ar-prompt">
-  <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
-</div>
+</model-viewer>
 
 <script>
-    // Verificar si el navegador soporta AR y mostrar el botón AR
+  function focusOnHotspot(x, y, z) {
+    // Modifica la posición de la cámara para centrarla en el hotspot
     const modelViewer = document.querySelector('model-viewer');
-    const arButton = document.getElementById('ar-button');
-    const noARMsg = document.getElementById('noARmsg');
-
-    if (modelViewer && modelViewer.hasAttribute('ar')) {
-        // Mostrar el botón AR solo si es compatible
-        arButton.style.display = 'block';
-        arButton.addEventListener('click', () => {
-            modelViewer.enterAR();
-        });
-    } else {
-        arButton.style.display = 'none';
-        noARMsg.style.display = 'block';
-    }
+    modelViewer.cameraOrbit = `${x}rad ${y}rad ${z}m`; // Ajusta la cámara al hotspot
+    modelViewer.cameraTarget = `${x}m ${y}m ${z}m`;  // Apunta la cámara al hotspot
+  }
 </script>
 
+    <p>Visualiza en 3D el sistema circulatorio para comprender cómo la poliglobulia afecta la viscosidad sanguínea y la oxigenación corporal.</p>
+  </section>
+
+  <!-- Resumen -->
+  <section>
+    <h2>Resumen</h2>
+    <p>La poliglobulia es el incremento patológico de la masa eritrocitaria, hemoglobina y hematocrito, causando un síndrome de hiperviscosidad con síntomas como cefaleas, disneas y tinnitus, además de un mayor riesgo de complicaciones trombóticas. En la ciudad de Oruro, ubicada a 3,800 m.s.n.m., la incidencia de esta patología es elevada, influenciada por la hipoxia de altura. El objetivo del estudio fue analizar la incidencia de casos de poliglobulia registrados en el Banco de Sangre Departamental de Oruro durante el periodo de enero de 2023 hasta junio de 2025. Se realizó un estudio no experimental, descriptivo, retrospectivo y transversal, con un universo de 1.724 pacientes de entre 18 y 80 años, quienes acudieron para tratamiento de flebotomía. Se registraron 725 casos en 2023, 709 en 2024 y 290 hasta junio de 2025. El grupo etario más vulnerable fue el de 50 a 80 años, representando cerca del 70% de los casos, y el sexo masculino fue el más afectado con un promedio del 73%. Más del 61% de los pacientes eran recurrentes y se evidenció alta prevalencia de hipertensión arterial.</p>
+    <div class="keywords">
+      <strong>Palabras clave:</strong> Altitud, incidencia, hipertensión, poliglobulia, tendencia.
     </div>
-    
-</section>
+  </section>
 
-        <section id="causas" class="content-section bg-light">
-            <h2>Causas Comunes</h2>
-            <ul>
-                Las Poliglobulias patológicas presentan diferentes factores predisponentes para su desarrollo.
-                <br><br>
-                Eritrocitosis Patológica de Altura: 
-                <br>
-                ▪ Radicatoria en alturas mayores a 2.500 msnm 
-                <br>
-                ▪ Ausencia de adaptación genética 
-                <br>
-                ▪ Sujetos nacidos a nivel del mar 
-                <br>
-                ▪ Historia familiar de residencia a nivel del mar 
-                <br><br>
-                Eritrocitosis Secundaria:
-                <br>
-                ▪ Secuelas de patologías pulmonares 
-                <br>
-                ▪ Patologías pulmonares crónicas 
-                <br>
-                ▪ Obesidad / Síndrome metabólico 
-                <br>
-                ▪ Síndrome de Apnea Obstructiva del Sueño (SAOS). 
-                <br>
-                ▪ Cardiopatía 
-                <br>
-                ▪ Tabaquismo 
-                <br><br>
-                Policitemia Vera: 
-                <br>
-                ▪ Edad, adulto mayor
-            </ul>
-            <div>
-                <div class="imagen">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
-                </div>
-            </div>
-        </section>
+  <!-- Introducción -->
+  <section>
+    <h2>Introducción</h2>
+    <p>La poliglobulia se define como el incremento de glóbulos rojos, hemoglobina y hematocrito por encima del valor normal, generalmente como respuesta compensatoria a la hipoxemia. En zonas de gran altitud, como Oruro (3.800 m.s.n.m.), esta condición se presenta con frecuencia debido a la baja presión de oxígeno. Factores como el tabaquismo, la obesidad, las enfermedades pulmonares y cardiovasculares agravan su incidencia.</p>
+    <p>Este estudio tiene como propósito analizar la incidencia de poliglobulia en pacientes atendidos en el Banco de Sangre Departamental de Oruro entre enero de 2023 y junio de 2025, identificando los grupos de riesgo y factores asociados para contribuir a estrategias de prevención y manejo clínico.</p>
+  </section>
 
-        <section id="sintomas" class="content-section">
-            <h2>Síntomas</h2>
-            <p>Los síntomas pueden variar, pero los más comunes son:</p>
-            <div class="symptoms-grid">
-                <a href="https://medlineplus.gov/spanish/ency/article/003024.htm" target="_blank">
-                    <div class="card">Dolor de cabeza</div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/dizziness/symptoms-causes/syc-20371787" target="_blank">
-                    <div class="card">Mareos</div>
-                </a>
-                <a href="https://my.clevelandclinic.org/health/symptoms/skin-flushing" target="_blank">
-                    <div class="card">Enrojecimiento de la piel</div>    
-                </a>
-                <a href="https://www.msdmanuals.com/es/hogar/temas-especiales/s%C3%ADntomas-inespec%C3%ADficos/fatiga" target="_blank">
-                    <div class="card">Fatiga</div>
-                </a>
-                <a href="https://medlineplus.gov/spanish/ency/article/003029.htm" target="_blank">
-                    <div class="card">Problemas visuales</div>
-                </a>
-                <a href="hhttps://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/dificultad-respiratoria" target="_blank">
-                    <div class="card">Dificultad para respirar</div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/tinnitus/symptoms-causes/syc-20350156" target="_blank">
-                    <div class="card">Tinnitus</div>
-                </a>
-                <a href="hhttps://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/dificultad-respiratoria" target="_blank">
-                    <div class="card">Falta de aire</div>
-                </a>
-                <a href="https://medlineplus.gov/spanish/ency/article/003029.htm" target="_blank">
-                    <div class="card">Visión borrosa </div>
-                </a>
-                <a href="https://www.aktifinternational.com/es/que-es-la-mialgia-cuales-son-los-sintomas/" target="_blank">
-                    <div class="card">Mialgias </div>
-                </a>
-                <a href="https://empendium.com/manualmibe/para-pacientes/303115,alteraciones-de-la-conciencia" target="_blank">
-                    <div class="card">Alteraciones del estado de conciencia </div>
-                </a>
-                <a href="https://www.msdmanuals.com/es/hogar/trastornos-del-pulm%C3%B3n-y-las-v%C3%ADas-respiratorias/s%C3%ADntomas-de-los-trastornos-pulmonares/cianosis" target="_blank">
-                    <div class="card">Cianosis periférica </div>
-                </a>
-                <a href="https://empendium.com/manualmibe/compendio/chapter/B34.I.1.42." target="_blank">
-                    <div class="card">Ingurgitación venosa </div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/edema/symptoms-causes/syc-20366493" target="_blank">
-                    <div class="card"> Edema </div>
-                </a>
-                <div>
-                    
-                </div>
-                
-             </div>
-            </section>
-                <section id=" " class="content-section bg-light">
-                <ul>  
-                <p>
-                    Sin embargo, cada una de las eritrocitosis patológicas presentan sintomatología adicional propia que las distingue unas de otras. Así por ejemplo, la eritrocitosis secundaria generalmente presenta una patología cardiopulmonar; mientras que, la policitemia vera presenta sintomatología propia de enfermedades neoplásicas, como evento trombótico frecuente, esplenomegalia y pérdida de peso. 
-                </p>
-                </ul>
-            </section>  
-            <div class="imagen">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
-            </div>     
-        <section id="complicaciones" class="content-section">
-            <h2>Complicaciones</h2>
-            <p>Los síntomas pueden variar, pero los más comunes son:</p>
-            <div class="symptoms-grid">
-                <a href="https://trombo.info/enfermedad-tromboembolica/trombosis-venosa-profunda/" target="_blank">
-                    <div class="card">Evento trombótico</div>
-                </a>
-                <a href="https://www.who.int/es/news-room/fact-sheets/detail/hypertension" target="_blank">
-                    <div class="card">Hipertensión Arterial Sistémica</div>
-                </a>
-                <a href="https://www.mayoclinic.org/es/diseases-conditions/pulmonary-hypertension/symptoms-causes/syc-20350697" target="_blank">
-                    <div class="card">Hipertensión Arterial Pulmonar</div>
-                </a>
-                <a href="https://www.msdmanuals.com/es/professional/trastornos-otorrinolaringol%C3%B3gicos/abordaje-del-paciente-con-s%C3%ADntomas-nasales-y-far%C3%ADngeos/epistaxis" target="_blank">
-                    <div class="card">Epistaxis</div>
-                </a>
-                <a href="https://medlineplus.gov/spanish/ency/article/003200.htm" target="_blank">
-                    <div class="card"> Convulsiones </div>
-                </a>
-                <a href="https://icrcat.com/enfermedades-oculares/desprendimiento-de-retina/" target="_blank">
-                    <div class="card">Desprendimiento de retina </div>
-                </a>
-                <a href="https://www.msdmanuals.com/es/professional/trastornos-endocrinol%C3%B3gicos-y-metab%C3%B3licos/diabetes-mellitus-y-trastornos-del-metabolismo-de-los-hidratos-de-carbono/diabetes-mellitus-dm" target="_blank">
-                    <div class="card">diabetes mellitus y policitemia</div>
-                </a>
-            </div>
-                <div class="imagen">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
-                </div>
-            </div>
-            </section>
-            <section id="tratamiento" class="content-section bg-light">
-                <h2>Tratamiento</h2>
-                <p>
-                    El tratamiento depende de la causa subyacente. En casos leves puede bastar con eliminar la causa (por ejemplo, dejar de fumar o tratar una enfermedad pulmonar),
-                    sin embargo de las eritrocitosis patológicas en la altura (Eritrocitosis Patologica de Altura, Eritrocitosis Secundaria y Policitemia Vera) se considera dos fases; la primera, el procedimiento de flebotomías que tiene el objetivo de disminuir la sintomatología del paciente; y la segunda, el tratamiento farmacológico que tiene la finalidad de establecer y mantener un cuadro clínico estable, evitando recaídas y complicaciones. 
-                    <br>
-                    Sin embargo si tiene sintomas similares acuda al centro de salud mas cercano.
-                </p>
-                <div>
-                    <div class="imagen">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgEQgKuL8Vc_FZhy_5BKi3dsrTg8ifBOnjxw&s">
-                    </div>
-                </div>
-            </section>
+  <!-- Objetivos -->
+  <section>
+    <h2>Objetivos</h2>
+    <h3>Objetivo General</h3>
+    <p>Analizar la incidencia de poliglobulia en pacientes atendidos en el Banco de Sangre Departamental de Oruro entre enero de 2023 y junio de 2025.</p>
 
-        <section id="contacto" class="content-section">
-            <h2>Contacto</h2>
-            <p>Para más información o consulta médica, comunícate con tu centro de salud o con un hematólogo especializado.</p>
-            <br><br>
-    <footer>
-        <p>© 2025 Información sobre Poliglobulia | Desarrollado por JPL</p>
-    </footer>
+    <h3>Objetivos Específicos</h3>
+    <ul>
+      <li>Identificar las características demográficas y clínicas de los pacientes con poliglobulia.</li>
+      <li>Obtener datos cuantitativos de los pacientes registrados durante el periodo de estudio.</li>
+      <li>Determinar el sexo más afectado y su relación con el peso corporal.</li>
+      <li>Realizar un pronóstico de incidencia de casos futuros.</li>
+      <li>Proponer medidas preventivas para reducir la incidencia de la enfermedad.</li>
+    </ul>
+  </section>
+
+  <!-- Materiales y Métodos -->
+  <section>
+    <h2>Materiales y Métodos</h2>
+    <p>El estudio fue de tipo no experimental, descriptivo, retrospectivo y transversal. La población incluyó 1.724 pacientes registrados entre enero de 2023 y junio de 2025. Los datos se obtuvieron de los registros institucionales de flebotomía del Banco de Sangre Departamental de Oruro.</p>
+    <p>Las variables analizadas incluyeron: edad, sexo, peso, presión arterial, nivel de hematocrito y recurrencia del tratamiento. Se emplearon herramientas como Microsoft Excel, Visual Studio Code, Unity y algoritmos de inteligencia artificial para análisis y proyecciones.</p>
+  </section>
+
+  <!-- Resultados -->
+  <section>
+    <h2>Resultados</h2>
+    <p>Se registraron 1.724 casos de poliglobulia en el periodo de estudio: 725 en 2023, 709 en 2024 y 290 hasta junio de 2025. El grupo de 50–80 años representó el 69% de los casos totales. El sexo masculino fue el más afectado, con el 73% del total.</p>
+
+    <h3>Distribución de casos por año</h3>
+    <table>
+      <tr><th>Año</th><th>Casos</th><th>% del total</th></tr>
+      <tr><td>2023</td><td>725</td><td>42%</td></tr>
+      <tr><td>2024</td><td>709</td><td>41%</td></tr>
+      <tr><td>2025 (Ene-Jun)</td><td>290</td><td>17%</td></tr>
+      <tr><th>Total</th><th>1724</th><th>100%</th></tr>
+    </table>
+
+    <p>El análisis mensual mostró variaciones sin un patrón estacional definido, aunque se observaron picos de mayor incidencia en los últimos meses de cada año. Los pronósticos realizados con métodos lineales y de inteligencia artificial proyectan entre 656 y 891 casos para 2025 y entre 546 y 700 para 2026.</p>
+  </section>
+
+  <!-- Discusión -->
+  <section>
+    <h2>Discusión</h2>
+    <p>Los resultados confirman una alta y sostenida incidencia de poliglobulia en Oruro, relacionada con la hipoxia crónica de gran altitud. El predominio del grupo etario de 50 a 80 años sugiere una vulnerabilidad progresiva asociada al envejecimiento y al deterioro de los mecanismos adaptativos. La marcada diferencia entre sexos (73% hombres) podría explicarse por factores hormonales, ocupacionales y metabólicos.</p>
+    <p>La coexistencia de hipertensión y sobrepeso agrava los efectos de la hiperviscosidad, aumentando el riesgo de complicaciones cardiovasculares. Además, la alta recurrencia al tratamiento demuestra que la poliglobulia es una condición crónica que requiere seguimiento permanente.</p>
+  </section>
+
+  <!-- Conclusiones -->
+  <section>
+    <h2>Conclusiones</h2>
+    <ul>
+      <li>Se confirmaron 1.724 casos de poliglobulia entre 2023 y 2025.</li>
+      <li>El grupo de edad más afectado fue el de 50 a 80 años (70% de los casos).</li>
+      <li>El sexo masculino predominó con un 73% del total.</li>
+      <li>Más del 61% de los pacientes fueron recurrentes al tratamiento.</li>
+      <li>El pronóstico indica una tendencia sostenida, con incremento hacia los últimos meses del año.</li>
+    </ul>
+  </section>
+
+  <!-- Agradecimientos -->
+  <section>
+    <h2>Agradecimientos</h2>
+    <p>A la Facultad de Ciencias de la Salud y la carrera de Medicina, por su formación y apoyo. Agradecimiento especial al Dr. Isaac Raúl Méndez Castro por su guía y al Banco de Sangre Departamental de Oruro por facilitar el acceso a los registros clínicos.</p>
+  </section>
+
+  <!-- Referencias -->
+  <section>
+    <h2>Referencias</h2>
+    <p>Basado en fuentes académicas como:</p>
+    <ul>
+      <li>Amaru Lucana, R., & Vera Carrasco, O. (2016). <em>Guía para el diagnóstico y tratamiento de las eritrocitosis patológicas en la altura</em>. Revista Médica de La Paz.</li>
+      <li>John & Hall. (2016). <em>Tratado de fisiología médica</em>. Elsevier.</li>
+      <li>Loscalzo, J. et al. (2018). <em>Harrison: Principios de Medicina Interna</em>. McGraw-Hill.</li>
+      <li>Klatt, E. C., & Kumar, V. (2022). <em>Robbins y Cotran. Repaso de anatomía patológica</em>.</li>
+      <li>Dumer, W. (2020). <em>Presión barométrica, reducción</em>. INSST.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tu Nombre | Estudio de Poliglobulia – Banco de Sangre Departamental de Oruro</p>
+  </footer>
 </body>
 </html>
-
